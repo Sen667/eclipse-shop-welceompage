@@ -12,6 +12,11 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        cardo: ['var(--font-cardo)'],
+        sans: ['var(--font-geist-sans)'],
+        'zen-dots': ['var(--font-zen-dots)'],
+      },
     },
   },
   plugins: [],

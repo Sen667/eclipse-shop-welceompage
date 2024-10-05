@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
+import { Zen_Dots } from 'next/font/google';
 import localFont from "next/font/local";
 import "./globals.css";
+
+// Initialize the Zen Dots font
+const zenDots = Zen_Dots({
+  weight: ['400'], // Zen Dots is only available in 400 weight
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-zen-dots',
+});
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${zenDots.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
